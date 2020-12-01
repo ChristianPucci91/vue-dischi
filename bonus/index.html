@@ -17,8 +17,15 @@
   <body>
 
     <div id = "root">
+
+      <select @change="filterDischi" v-model="value">
+         <option value="all">All</option>
+         <option value="pop">Pop</option>
+         <option value="rock">Rock</option>
+         <option value="metal">Metal</option>
+         <option value="jazz">Jazz</option>
+      </select>
      <!-- per ogni elemento dell'array in js andiamo a stampare le proprietà dell album  -->
-    
      <div class="container">
        <div class="album" v-for="(disc,index) in dischi">
 
