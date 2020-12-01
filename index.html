@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   </head>
 
@@ -16,11 +18,11 @@
 
     <div id = "root">
      <!-- per ogni elemento dell'array in js andiamo a stampare le proprietà dell album  -->
-     <div>
+     <div class="container">
        <div class="album" v-for="(disc,index) in dischi">
 
          <img :src="disc.poster" alt="">
-         <h3>{{disc.title}}</h3>
+         <p class="color">{{disc.title}}</p>
          <p>{{disc.author}}</p>
          <p>{{disc.year}}</p>
 
