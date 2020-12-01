@@ -14,7 +14,7 @@ var app = new Vue({
   el: "#root",
   data: {
     dischi: [],
-    value: 'all'
+    value: ''
   },
   mounted: function () {
 
@@ -22,19 +22,8 @@ var app = new Vue({
      .then(risposta => {
 
        this.disc = risposta.data.response;
-       this.dischi.push(...this.disc)
+       this.dischi.push(...this.disc);
 
       });
-
-   },
-   methods: {
-      filterDischi: function () {
-        if (this.value == 'all') {
-           this.dischi
-       }else {
-          this.dischi = this.dischi.filter(album => album.genre.toLowerCase() === this.value);
-          this.dischi = risposta.data.response;
-       }
-      }
-    }
+   }
 });

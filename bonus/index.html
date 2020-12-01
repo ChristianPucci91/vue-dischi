@@ -18,16 +18,19 @@
 
     <div id = "root">
 
-      <select @change="filterDischi" v-model="value">
-         <option value="all">All</option>
-         <option value="pop">Pop</option>
-         <option value="rock">Rock</option>
-         <option value="metal">Metal</option>
-         <option value="jazz">Jazz</option>
+      <!-- BONUS: opzione per selezionare il genere -->
+      <!-- daremo al tag select un valore "value" -->
+      <select v-model="value">
+         <option value="">All</option>
+         <option value="Pop">Pop</option>
+         <option value="Rock">Rock</option>
+         <option value="Metal">Metal</option>
+         <option value="Jazz">Jazz</option>
       </select>
      <!-- per ogni elemento dell'array in js andiamo a stampare le proprietà dell album  -->
      <div class="container">
-       <div class="album" v-for="(disc,index) in dischi">
+       <!-- aggiunta condizione BONUS : se nelle proprietà "genre" che otteniamo interrogando l'api includerà il valore "value" allora verrà visualizzato. -->
+       <div class="album" v-for="(disc,index) in dischi" v-show="disc.genre.includes(value)">
 
          <img :src="disc.poster" alt="">
          <p class="color">{{disc.title}}</p>
@@ -35,6 +38,7 @@
          <p>{{disc.year}}</p>
 
        </div>
+
      </div>
 
     </div>
