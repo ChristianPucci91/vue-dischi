@@ -7,8 +7,23 @@
 
 #root {
   background: #1e2d3b;
+  text-align: center;
 }
 
+header {
+  height: 50px;
+  background-color: #2e3a46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > img {
+  background: green;
+  border-radius: 50%;
+}
+header > * {
+  margin:0 200px;
+}
 .container {
   display: flex;
   flex-flow:row wrap;
@@ -24,13 +39,9 @@
   height: 200px;
   width: calc(100% / 5);
   text-align: center;
-  /* debug */
-  display: inline-block;
   background-color: #2e3a46;
-  border: 1px solid black;
   margin: 5px 10px;
   color:#51585f;
-  /* fine debug */
 }
 
 .album img {

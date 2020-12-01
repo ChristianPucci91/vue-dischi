@@ -18,15 +18,19 @@
 
     <div id = "root">
 
-      <!-- BONUS: opzione per selezionare il genere -->
-      <!-- daremo al tag select un valore "value" -->
-      <select v-model="value">
-         <option value="">All</option>
-         <option value="Pop">Pop</option>
-         <option value="Rock">Rock</option>
-         <option value="Metal">Metal</option>
-         <option value="Jazz">Jazz</option>
-      </select>
+      <header>
+        <img :src="img" alt="">
+        <!-- BONUS: opzione per selezionare il genere -->
+        <!-- daremo al tag select un valore "value" -->
+        <select v-model="value">
+           <option value="">All</option>
+           <option value="Pop">Pop</option>
+           <option value="Rock">Rock</option>
+           <option value="Metal">Metal</option>
+           <option value="Jazz">Jazz</option>
+        </select>
+      </header>
+
      <!-- per ogni elemento dell'array in js andiamo a stampare le proprietà dell album  -->
      <div class="container">
        <!-- aggiunta condizione BONUS : se nelle proprietà "genre" che otteniamo interrogando l'api includerà il valore "value" allora verrà visualizzato. -->
@@ -42,7 +46,6 @@
      </div>
 
     </div>
-
 
     <script type="text/javascript" src="js/script.js">
     </script>

@@ -14,7 +14,8 @@ var app = new Vue({
   el: "#root",
   data: {
     dischi: [],
-    value: ''
+    value: '',
+    img:'img/favicon.ico'
   },
   mounted: function () {
 
