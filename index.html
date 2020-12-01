@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Vue dischi by Christian Pucci</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Stampare direttamente con un h1 -->
+    <div id = "root">
+
+     <!-- per ogni elemento dell'array in js andiamo a stampare il nome della mail associando l'index sommato di 1 -->
+     <ul>
+       <li v-for="(disc,index) in dischi">
+         {{disc}}
+       </li>
+     </ul>
+
+    </div>
+
+
+    <script type="text/javascript" src="js/script.js">
+    </script>
+
+  </body>
+
+</html>
