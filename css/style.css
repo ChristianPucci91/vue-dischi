@@ -17,6 +17,8 @@
   width: 100px;
   /* debug */
   display: inline-block;
+  background-color: lightblue;
+  border: 1px solid black;
   /* fine debug */
 }
 
