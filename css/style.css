@@ -1,0 +1,26 @@
+/* regole generali */
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.album {
+  height: 200px;
+  width: 100px;
+  /* debug */
+  display: inline-block;
+  /* fine debug */
+}
+
+.album img {
+  max-width: 50px;
+  max-height: 100px;
+}
